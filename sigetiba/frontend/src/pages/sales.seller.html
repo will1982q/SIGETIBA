@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <div class="center-align green-text text-accent-4 title">
+                Sistema De Gestion De Tiendas De Barrio <span id="sigetiba-spa">SIGETIBA</span>
+            </div>
+        </header>
+        <!-- -------------------NAVBAR ---------------------->
+        <nav>
+            <div class="nav-wrapper green accent-4">
+                <a class="brand-logo right"><i class="material-icons">local_grocery_store</i>VENDEDOR</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="sales.seller.html">Ventas</a></li>
+                    <li><a href="stocks-search.seller.html">Inventario</a></li>                    
+                </ul>
+                <a id="close-btn" class="black accent-4 btn">SALIR</a>                
+            </div>
+        </nav>       
+        <!-- -------------------NAVBAR ---------------------->
+        <main>
+            <h2 id="page-title" class="center-align">Gestion De Ventas</h2>
+            <section>
+                <div class="input-field">
+                    <input type="text" id="sale-datetime-txt" placeholder="">
+                    <label for="sale-datetime-txt" class="green-text text-accent-4">FECHA & HORA</label>
+                </div>          
+            </section>
+            <section>
+                
+                    <button type="button" id="sale-pay-btn" class="waves-effect waves-light btn green accent-4">FACTURAR</button>
+                    <p>TOTAL: <span id="sale-total-spa">0000</span></p>
+                    <span id="sale-available-stock-spa"></span>
+                    <table id="sale-adding-tbl">
+                        <thead>
+                            <th>BUSCAR x NOMBRE</th>
+                            <th>BUSCAR x EAN</th>
+                            <th></th>
+                            <th>DESCRIPCION</th>
+                            <th>EAN</th>                        
+                            <th>V.UNITARIO</th>
+                            <th>CANTIDAD</th>
+                            <th>V. PARCIAL</th>
+                            <th>AGREGAR</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <form id="sale-frm">
+                                <td id="sale-product-td">
+                                    <div class="input-field" id="old-product-div">                    
+                                        <select id="sale-products-sel">                        
+                                            <option id="sale-new-product-opt" selected value="EAN">DIGITAR EAN</option>                                        
+                                        </select>
+                                        <label for="sale-products-sel" class="green-text text-accent-4"></label>
+                                    </div>                              
+                                </td>                                                             
+                                <td id="sale-ean-in-td">
+                                    <div class="input-field">
+                                        <input type="text" id="sale-ean-find-txt" placeholder="DIGITE EAN">
+                                        <label for="sale-ean-find-txt" class="green-text text-accent-4"></label>
+                                    </div>
+                                </td>
+                                <td id="sale-complete-td">
+                                    <button type="button" id="sale-fill-fields-btn" class="btn-floating btn-large waves-effect waves-light green accent-4"><i class="material-icons">chevron_right</i></button>
+                                </td>
+                                <td id="sale-name-td">
+                                    <div class="input-field">
+                                        <input type="text" id="sale-name-txt" placeholder="DESCRIPCION">
+                                        <label for="sale-name-txt" class="green-text text-accent-4"></label>
+                                    </div>
+                                </td>
+                                <td id="sale-ean-out-td">
+                                    <div class="input-field">
+                                        <input type="text" id="sale-ean-txt" placeholder="EAN">
+                                        <label for="sale-ean-txt" class="green-text text-accent-4"></label>
+                                    </div>
+                                </td>
+                                <td id="sale-price-td">
+                                    <div class="input-field">
+                                        <input type="text" id="sale-unit-value-txt" placeholder="V. Unitario">
+                                        <label for="sale-unit-value-txt" class="green-text text-accent-4"></label>
+                                    </div>
+                                </td>
+                                <td id="sale-quantity-td">
+                                    <div class="input-field">
+                                        <input type="text" id="sale-quantity-txt" placeholder="Cantidad">
+                                        <label for="sale-quantity-txt" class="green-text text-accent-4"></label>
+                                    </div>
+                                </td>                            
+                                
+                                <td id="sale-partial-value-td">
+                                    <div class="input-field">
+                                        <input type="text" id="sale-partial-value-txt" placeholder="V. Parcial">
+                                        <label for="sale-partial-value-txt" class="green-text text-accent-4"></label>
+                                    </div>
+                                </td>                            
+                                <td id="sales-add-row-td">
+                                    <button type="button" id="sale-add-row-btn" class="btn-floating btn-large waves-effect waves-light green accent-4"><i class="material-icons">add</i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                                   
+            </section>                             
+                
+            <section>
+                <table id="sale-added-tbl">
+                    <caption>PRODUCTOS A FACTURAR</caption>
+                    <thead>                    
+                        <th>EAN</th>
+                        <th>DESCRIPCION</th>                        
+                        <th>CANTIDAD</th>
+                        <th>V. UNITARIO</th>
+                        <th>V. PARCIAL</th>
+                        <th>MODIFICAR</th>                    
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>  
+            </section>
+        </main>
+    </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/sales.seller.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <div class="center-align green-text text-accent-4 title">
+                Sistema De Gestion De Tiendas De Barrio <span id="sigetiba-spa">SIGETIBA</span>
+            </div>
+        </header>
+        <!----------------------NavBar----------------------------->
+        <nav>
+            <div class="nav-wrapper green accent-4">
+                <a class="brand-logo right"><i class="material-icons">build</i>ADMINISTRADOR</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="employees.administrator.html">Usuarios</a></li>
+                    <li><a href="cash.administrator.html">Caja</a></li>
+                    <li><a href="purchases.administrator.html">Compras</a></li>
+                <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#" data-target="report-dropdown">Consultas<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <a id="close-btn" class="black accent-4 btn">SALIR</a>               
+                                
+            </div>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="report-dropdown" href="!#" class="dropdown-content">
+            <li><a href="stocks-search.administrator.html">Inventario</a></li>
+            <li><a href="sales-search.administrator.html">Ventas Diarias</a></li>            
+        </ul>
+        <!----------------------NavBar----------------------------->
+        <main>
+            <h2 id="page-title" class="center-align">Gestion De Usuarios</h2>
+            <section>
+                <form>
+                    <div class="input-field">
+                        <input type="text" id="employee-name-txt" placeholder="Digite sus nombres">
+                        <label for="employee-name-txt" class="green-text text-accent-4">NOMBRES</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="employee-lastname-txt" placeholder="Digite sus apellidos">
+                        <label for="employee-lastname-txt" class="green-text text-accent-4">APELLIDOS</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="employee-identification-card-txt" placeholder="Digite su cedula">
+                        <label for="employee-identification-card-txt" class="green-text text-accent-4">CEDULA</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="employee-phone-txt" placeholder="Digite su numero de telefono">
+                        <label for="employee-phone-txt" class="green-text text-accent-4">TELEFONO</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="employee-email-txt" placeholder="Digite su email">
+                        <label for="employee-email-txt" class="green-text text-accent-4">EMAIL</label>
+                    </div>                                     
+                    <div class="input-field">                    
+                        <select id="employee-role-sel">                        
+                            <option value="VENDEDOR">VENDEDOR</option>
+                            <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                        </select>
+                        <label for="employee-role-sel" class="green-text text-accent-4">CARGO</label>
+                    </div>
+                     
+                    <div class="input-field">
+                        <input type="text" id="employee-username-txt" placeholder="Digite su nombre usuario">        
+                        <label for="employee-user-txt" class="green-text text-accent-4">USUARIO</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="employee-password-txt" placeholder="Digite su contraseña">
+                        <label for="employee-password-txt" class="green-text text-accent-4">CONTRASEÑA</label>
+                    </div>
+                    <button type="button" id="employee-create-user-btn" class="waves-effect waves-light btn green accent-4">REGISTRAR EMPLEADO</button><br>
+                    <span id="employee-message-spa"></span>
+                </form>
+            </section>
+            <section>
+                <table id="employee-records-tbl">
+                    <thead>
+                        <th>CARGO</th>
+                        <th>NOMBRE</th>
+                        <th>CEDULA</th>
+                        <th>TELEFONO</th>
+                        <th>ESTADO</th>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+            </section>            
+        </main>      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/employees.administrator.js" type="module"></script>
+  </body>
+</html>

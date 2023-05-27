@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <div class="center-align green-text text-accent-4 title">
+                Sistema De Gestion De Tiendas De Barrio <span id="sigetiba-spa">SIGETIBA</span>
+            </div>
+        </header>
+        <!-- -------------------NAVBAR ---------------------->
+        <nav>
+            <div class="nav-wrapper green accent-4">
+                <a class="brand-logo right"><i class="material-icons">build</i>ADMINISTRADOR</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="employees.administrator.html">Usuarios</a></li>
+                    <li><a href="cash.administrator.html">Caja</a></li>
+                    <li><a href="purchases.administrator.html">Compras</a></li>
+                <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="report-dropdown">Consultas<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <a id="close-btn" class="black accent-4 btn">SALIR</a>                
+            </div>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="report-dropdown" class="dropdown-content">
+            <li><a href="stocks-search.administrator.html">Inventario</a></li>
+            <li><a href="sales-search.administrator.html">Ventas Diarias</a></li>            
+        </ul>
+        <!-- -------------------NAVBAR ---------------------->
+        <main>
+            <h2 id="page-title" class="center-align">Reporte De Ventas</h2>
+            
+            <section>
+                <table id="cash-added-tbl"> 
+                    <thead>                        
+                        <th>FECHA</th>                        
+                        <th>VALOR VENDIDO</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </section>
+        </main>      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/sales-search.administrator.js" type="module"></script>
+  </body>
+</html>

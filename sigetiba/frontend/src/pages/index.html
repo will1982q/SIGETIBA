@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="center-align green-text text-accent-4 title">
+                    Sistema De Gestion De Tiendas De Barrio <span id="sigetiba-spa">SIGETIBA</span>
+                </div>
+            </header>
+            <!-- <div class="center-align green-text text-accent-4 title">Sistema De Gestion De Tiendas De Barrio <span >SIGETIBA</span></div> -->
+            <div class="card-panel teal lighten-5">
+                <div class="row">
+                    <h5 class="center-align green-text text-accent-4">Ingresar a la aplicacion</h5>
+                    <div class="input-field col s8 offset-s2">
+                        <select id="role-sel">
+                            <option value="" disabled selected >Seleccione su cargo</option>
+                            <option value="VENDEDOR">VENDEDOR</option>
+                            <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                        </select>
+                        <label class="green-text text-accent-4">CARGO</label>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <label for="username-txt" class="green-text text-accent-4">USUARIO</label>
+                        <input id="username-txt" type="text" class="validate" placeholder="Digite su usuario">
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <input id="password-txt" type="password" class="validate" placeholder="Digite su contraseña">
+                        <label for="password-txt" class="green-text text-accent-4">CONTRASEÑA</label>
+                    </div>
+                </div>                    
+
+                <div class="row">
+                    <div class="col offset-s5"><button id="login-btn" class="waves-effect waves-light btn green accent-4">INGRESAR</button></div>
+                </div>
+                <span id="messages-spa"></span>                       
+                    
+            </div>
+             
+        </div>
+        
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="../js/index.js" type="module"></script>
+    </body>
+  </html>

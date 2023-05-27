@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <div class="center-align green-text text-accent-4 title">
+                Sistema De Gestion De Tiendas De Barrio <span id="sigetiba-spa">SIGETIBA</span>
+            </div>
+        </header>
+        <nav>
+            <div class="nav-wrapper green accent-4">
+              <a class="brand-logo right"><i class="material-icons">local_grocery_store</i>VENDEDOR</a>
+                <ul class="left hide-on-med-and-down">
+                  <li><a href="sales.seller.html">Ventas</a></li>
+                  <li><a href="stocks-search.seller.html">Inventario</a></li>                    
+                </ul> 
+                <a id="close-btn" class="black accent-4 btn">SALIR</a>               
+            </div>
+        </nav>       
+        
+        <main>
+          <h2 id="page-title" class="center-align">Reporte De Inventario</h2>
+            <section>
+                <table id="stock-added-tbl"> 
+                    <thead>                        
+                        <th>EAN</th>                        
+                        <th>DESCRIPCION</th>
+                        <th>CANTIDAD</th>
+                        <th>PRECIO DE COMPRA</th>
+                        <th>PRECIO DE VENTA</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </section>
+        </main>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/stocks-search.seller.js" type="module"></script>
+  </body>
+</html>

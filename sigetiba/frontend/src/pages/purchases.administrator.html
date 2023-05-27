@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <div class="center-align green-text text-accent-4 title">
+                Sistema De Gestion De Tiendas De Barrio <span id="sigetiba-spa">SIGETIBA</span>
+            </div>
+        </header>
+        <!-- -------------------NAVBAR ---------------------->
+        <nav>
+            <div id="nav-div" class="nav-wrapper green accent-4">
+                <a class="brand-logo right"><i class="material-icons">build</i>ADMINISTRADOR</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="employees.administrator.html">Usuarios</a></li>
+                    <li><a href="cash.administrator.html">Caja</a></li>
+                    <li><a href="purchases.administrator.html">Compras</a></li>
+                    <li><a class="dropdown-trigger" href="#" data-target="report-dropdown">Consultas<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <a id="close-btn" class="black accent-4 btn">SALIR</a>                
+            </div>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="report-dropdown" href="!#" class="dropdown-content">
+            <li><a href="stocks-search.administrator.html">Inventario</a></li>
+            <li><a href="sales-search.administrator.html">Ventas Diarias</a></li>            
+        </ul>
+        <!-- -------------------NAVBAR ---------------------->
+
+        <main>
+            <h2 id="page-title" class="center-align">Gestion De Compras</h2>
+            <section>
+                <form>
+                    <div class="input-field">
+                        <input type="text" id="purchase-number-txt" placeholder="">
+                        <label for="purchase-number-txt" class="green-text text-accent-4">NUMERO DE FACTURA</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="purchase-datetime-txt" placeholder="">
+                        <label for="purchase-datetime-txt" class="green-text text-accent-4">FECHA & HORA</label>
+                    </div>                    
+                    <div class="input-field">                    
+                        <select id="purchase-supplier-sel">                        
+                            <option selected disabled>Seleccione Proveedor</option>
+                            <option value="NUEVO">Nuevo Proveedor</option>                                                       
+                        </select>
+                        <label for="employee-role-sel" class="green-text text-accent-4">PROVEEDOR</label>
+                    </div>
+                    
+                    <div id="new-supplier-div" hidden>
+                        <div class="input-field">
+                            <input type="text" id="purchase-supplier-name-txt" placeholder="Digite el nombre del proveedor">
+                            <label for="purchase-supplier-name-txt" class="green-text text-accent-4">NOMBRE DEL PROVEEDOR</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="purchase-supplier-nit-txt" placeholder="Digite el NIT">
+                            <label for="purchase-supplier-nit-txt" class="green-text text-accent-4">NIT DEL PROVEEDOR</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="purchase-supplier-phone-txt" placeholder="Digite el telefono">
+                            <label for="purchase-supplier-phone-txt" class="green-text text-accent-4">TELEFONO DEL PROVEEDOR</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="purchase-supplier-email-txt" placeholder="Digite el email">
+                            <label for="purchase-supplier-email-txt" class="green-text text-accent-4">EMAIL DEL PROVEEDOR</label>
+                        </div>                    
+                    </div>
+                </form>
+            </section>
+            <section>
+                <button type="button" id="purchase-buy-btn" class="waves-effect waves-light btn green accent-4">AGREGAR COMPRA</button>
+                <p>TOTAL: <span id="purchase-total-spa">0000</span></p>
+                <table id="purchase-adding-tbl">
+                    <thead>
+                        <th>PRODUCTO</th>
+                        <th>NOMBRE</th>
+                        <th>EAN</th>
+                        <th>CANTIDAD</th>
+                        <th>P.COMPRA</th>
+                        <th>P.VENTA</th>
+                        <th>V. PARCIAL</th>
+                        <th>AGREGAR</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="purchase-name-td">
+                                <div class="input-field" id="old-product-div">                    
+                                    <select id="purchase-products-sel">                        
+                                        <option id="purchase-new-product-opt" selected disabled>Seleccione Producto</option>
+                                        <option id="purchase-new-product-opt" value="NUEVO">Nuevo Producto</option>
+                                    </select>
+                                    <label for="purchase-new-product-opt" class="green-text text-accent-4">PROVEEDOR</label>
+                                </div>                              
+                            </td>
+                            <td>
+                                <div class="input-field" id="new-product-div">
+                                    <input type="text" id="purchase-name-txt" placeholder="Nombre">
+                                    <label for="purchase-name-txt" class="green-text text-accent-4"></label>
+                                </div>
+                            </td>
+                            <td id="purchase-ean-td">
+                                <div class="input-field">
+                                    <input type="text" id="purchase-ean-txt" placeholder="EAN">
+                                    <label for="purchase-ean-txt" class="green-text text-accent-4"></label>
+                                </div>
+                            </td>
+                            <td id="purchase-quantity-td">
+                                <div class="input-field">
+                                    <input type="text" id="purchase-quantity-txt" placeholder="Cantidad">
+                                    <label for="purchase-quantity-txt" class="green-text text-accent-4"></label>
+                                </div>
+                            </td>
+                            <td id="purchase-price-td">
+                                <div class="input-field">
+                                    <input type="text" id="purchase-price-txt" placeholder="Precio compra">
+                                    <label for="purchase-price-txt" class="green-text text-accent-4"></label>
+                                </div>
+                            </td>
+                            <td id="purchase-sale-price-td">
+                                <div class="input-field">
+                                    <input type="text" id="purchase-sale-price-txt" placeholder="Precio Venta">
+                                    <label for="purchase-sale-price-txt" class="green-text text-accent-4"></label>
+                                </div>
+                            </td>
+                            <td id="purchase-partial-value-td">0</td>
+                            <td id="purchase-add-row-td">
+                                <button type="button" id="purchase-add-row-btn" class="btn-floating btn-large waves-effect waves-light green accent-4"><i class="material-icons">add</i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>                    
+            </section>                             
+                
+            <section>
+                <table id="purchase-added-tbl">
+                    <caption>PRODUCTOS QUE SE AGREGARAN AL INVENTARIO</caption>
+                    <thead>                    
+                        <th>EAN</th>
+                        <th>NOMBRE</th>
+                        <th>CANTIDAD</th>                
+                        <th>PRECIO COMPRA</th>
+                        <th>PRECIO VENTA</th>                                    
+                        <th>VALOR PARCIAL</th>
+                        <th>MODIFICAR</th>                    
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>  
+            </section>            
+        </main>      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/purchases.administrator.js" type="module"></script>
+  </body>
+</html>

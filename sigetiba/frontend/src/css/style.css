@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    border: solid#00c853;
+    padding: 20px;
+}
+section {
+    padding: 5px;
+    border: solid#00c853;
+}
+#nav-div {
+    display: flex;
+    /* position: relative; */
+    align-items: center;    
+}
+
+.title {
+    font-size: 1.8em;
+    font-style: italic;
+}
+#sigetiba-spa {
+    font-size: 2em;
+}
+
+#page-title{
+    font-size: 1.9em;
+    color: #00c853;
+    align-items: center;
+    
+}
